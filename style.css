@@ -70,6 +70,7 @@ body {
 
 
 
+
 #title {
   font-size: 34px;
   font-weight: 700;
@@ -91,9 +92,12 @@ body {
   padding: 2rem 1rem;
   border-radius: 5%;
   width: 45%;
+}
 
-
-
+@media (max-width:768px) {
+  #survey-form {
+    width: 70%;
+  }
 }
 
 #survey-form #name,
