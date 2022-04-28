@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <title>Devs Camp</title>
+</head>
+<body>
+  <main id="main">
+    <h1 id="title" >Formulario de Inscripcion</h1>
+    <p id="description" >Camp Dev es un campamento para desarrolladores, que ofrece las posibilidades de conocer mas gente como tu que se quieran dedicar al desarrollo de software. </p>
+  
+    <form id="survey-form">
+      <label id="name-label" for="name">Name
+       <input id="name" type="text" required placeholder="Name"></input>
+      </label>
+      <label id="email-label" for="email">E-mail
+      <input id="email" type="email" required placeholder="E-mail"></input>
+      </label>
+      <label id="number-label" for="number">Number
+      <input id="number" type="number" required placeholder="Number" min="10" max="10" ></input>
+      </label>
+      <label for="menu">Selecciona tu rol
+        <select name="menu" id="dropdown">
+          <option value="menu" selected>Selecciona tu rol actual</option>
+          <option  value="menu">Estudiante</option>
+          <option  value="menu">Trabajador</option>
+          <option  value="menu">Desempleado</option>
+          <option  value="menu">Otro</option>
+        </select>
+      </label>
+      <div class="radio-group">
+        <h2 class="subtitle">¿A que rama del desarrollo de software les gustaria dedicarse?</h2>
+        <label class="cont-radio" for="">Desarrollo Web
+          
+          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+        </label>
+        <label class="cont-radio" for="">Front End
+          
+          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+        </label>
+        <label class="cont-radio" for="">Algoritmos y estructura
+          
+          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+        </label>
+        <label class="cont-radio" for="">Backend
+          
+          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+        </label>
+        <label class="cont-radio" for="">Full Stack
+          
+          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+        </label>
+      </div>
+      <div class="req-dev">
+        <h2 class="subtitle">Selecciona los casilleros con las cosas con las que cuentas</h2>
+        <label class="cont-check">
+          <input type="checkbox" name="req" value="Portatil" class="inp-check">Portatil <br>
+          <input type="checkbox" name="req" value="Celular" class="inp-check">Celular <br>
+          <input type="checkbox" name="req" value="Internet" class="inp-check">Internet <br>
+          <input type="checkbox" name="req" value="Escritorio" class="inp-check">Escritorio <br>
+          <input type="checkbox" name="req" value="Mouse" class="inp-check">Mouse <br>
+          <input type="checkbox" name="req" value="Teclado" class="inp-check">Teclado <br>
+          <input type="checkbox" name="req" value="PC de Escritorio" class="inp-check">PC de Escritorio <br>
+        </label>
+      </div>
+      <div class="cont txta">
+        <h2 class="subtitle">¿Algun comentario o duda?</h2>
+        <textarea name="text-area" id="comment" cols="30" rows="10" placeholder="Introduce tu comentario"></textarea>
+      </div>
+      <button id="submit" value="Send">Send</button>      
+    </form>
+  
+  </main>
+</body>
+</html>
