@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
   <title>Devs Camp</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main id="main">
@@ -17,21 +18,21 @@
   
     <form id="survey-form">
       <label id="name-label" for="name">Name
-       <input id="name" type="text" required placeholder="Name"></input>
+       <input id="name" name="name"type="text" required placeholder="Name"></input>
       </label>
       <label id="email-label" for="email">E-mail
-      <input id="email" type="email" required placeholder="E-mail"></input>
+      <input id="email" type="email" name="email" required placeholder="E-mail"></input>
       </label>
       <label id="number-label" for="number">Number
-      <input id="number" type="number" required placeholder="Number" min="10" max="10" ></input>
+      <input id="number" type="number"  name="number" required placeholder="Number" min="10" max="10" ></input>
       </label>
       <label for="menu">Selecciona tu rol
-        <select name="menu" id="dropdown">
-          <option value="menu" selected>Selecciona tu rol actual</option>
-          <option  value="menu">Estudiante</option>
-          <option  value="menu">Trabajador</option>
-          <option  value="menu">Desempleado</option>
-          <option  value="menu">Otro</option>
+        <select name="menu_select" id="dropdown">
+          <option  required selected hidden>Selecciona tu rol actual</option>
+          <option>Estudiante</option>
+          <option>Trabajador</option>
+          <option>Desempleado</option>
+          <option>Otro</option>
         </select>
       </label>
       <div class="radio-group">
@@ -42,19 +43,19 @@
         </label>
         <label class="cont-radio" for="">Front End
           
-          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+          <input type="radio" name="user-pref" class="radio" value="Front End">
         </label>
-        <label class="cont-radio" for="">Algoritmos y estructura
+        <label class="cont-radio" for="">Algoritmos y estructura de datos
           
-          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+          <input type="radio" name="user-pref" class="radio" value="Algoritmos y estructura de datos">
         </label>
         <label class="cont-radio" for="">Backend
           
-          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+          <input type="radio" name="user-pref" class="radio" value="Backend">
         </label>
         <label class="cont-radio" for="">Full Stack
           
-          <input type="radio" name="user-pref" class="radio" value="Desarrollo Web">
+          <input type="radio" name="user-pref" class="radio" value="Full Stack">
         </label>
       </div>
       <div class="req-dev">
@@ -73,8 +74,9 @@
         <h2 class="subtitle">¿Algun comentario o duda?</h2>
         <textarea name="text-area" id="comment" cols="30" rows="10" placeholder="Introduce tu comentario"></textarea>
       </div>
-      <button id="submit" value="Send">Send</button>      
     </form>
+    <button id="submit" value="Send" onclick=" sendValues()">Send</button>
+    <div id="values_form"></div>      
   
   </main>
 </body>
